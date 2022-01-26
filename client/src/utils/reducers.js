@@ -35,6 +35,7 @@ import {
     }
   };
 
+  // useProductReducer will return current global "state" and use "dispatch" method to update the state by looking for an action object
   export function useProductReducer(initialState) {
     return useReducer(reducer, initialState);
   }
