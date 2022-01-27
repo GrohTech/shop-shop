@@ -17,7 +17,11 @@ const StoreProvider = ({ value = [], ...props }) => {
       categories: [],
       currentCategory: '',
     });
-    // use this to confirm it works!
-    console.log(state);
     return <Provider value={[state, dispatch]} {...props} />;
   };
+
+  const useStoreContext = () => {
+    return useContext(StoreContext);
+  };
+  
+  export { StoreProvider, useStoreContext };
